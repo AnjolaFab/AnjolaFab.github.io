@@ -50,14 +50,12 @@
 
             function showNextItem() {
                 items[currentIndex].classList.remove('active');
-                items[currentIndex].style.opacity = "0";
-                items[currentIndex].style.visibility = "hidden";
+                items[currentIndex].style.display = "none"; // Hide current
 
-                currentIndex = (currentIndex + 1) % itemCount;
+                currentIndex = (currentIndex + 1) % itemCount; // Next index
 
                 items[currentIndex].classList.add('active');
-                items[currentIndex].style.opacity = "1";
-                items[currentIndex].style.visibility = "visible";
+                items[currentIndex].style.display = "block"; // Show next
             }
 
             setInterval(showNextItem, 5000); // Change slide every 5 seconds
@@ -73,16 +71,12 @@
         }
 
         .carousel-item {
-            display; block;
             width: 100%;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 1s ease-in-out;
+            display: none; /* Initially hidden */
         }
 
         .carousel-item.active {
-            opacity: 1;
-            visibility: visible;
+            display: block; /* Show active video */
         }
 
         iframe {
