@@ -14,72 +14,77 @@
         <h2>About Me</h2>
         <p>Hi, I'm Anjola, a passionate Cybersecurity Enthusiast with a love for providing innovative security solutions. I hope to specialize in SOC and Digital Forensics and enjoy working on open-source projects.</p>
     </section>
+
+    <section id="topic">
+        <h2>Install Windows Server With Me</h2>
+        <p>COMING SOON................</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Connect with me on <a href="https://www.linkedin.com/in/anjolaoluwa-f-7a941880/" target="_blank">LinkedIn</a>.</p>
+    </section>
+
+    <section id="banner">
+        <div class="carousel">
+            <div class="carousel-item active">
+                <video controls>
+                    <source src="video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="carousel-item">
+                <video controls>
+                    <source src="video2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="carousel-item">
+                <video controls>
+                    <source src="video3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let currentIndex = 0;
+            const items = document.querySelectorAll('.carousel-item');
+            const itemCount = items.length;
+
+            function showNextItem() {
+                items[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % itemCount;
+                items[currentIndex].classList.add('active');
+            }
+
+            setInterval(showNextItem, 3000);
+        });
+    </script>
+
+    <style>
+        .carousel {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .carousel-item {
+            display: none;
+            position: absolute;
+            width: 100%;
+        }
+
+        .carousel-item.active {
+            display: block;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+        }
+    </style>
 </body>
 </html>
-<section id="topic">
-    <h2>Install Windows Server With me</h2>
-    <p>COMING SOON................</p>
-</section>
-<section id="contact">
-    <h2>Contact Me</h2>
-    <p>Connect with me on <a href="https://www.linkedin.com/in/anjolaoluwa-f-7a941880/" target="_blank">LinkedIn</a>.</p>
-</section></section>
-<section id="banner">
-    <div class="carousel">
-        <div class="carousel-item">
-            <video controls>
-                <source src="video1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        <div class="carousel-item">
-            <video controls>
-                <source src="video2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        <div class="carousel-item">
-            <video controls>
-                <source src="video3.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-</section>
-
-<script>
-    let currentIndex = 0;
-    const items = document.querySelectorAll('.carousel-item');
-    const itemCount = items.length;
-
-    function showNextItem() {
-        items[currentIndex].classList.remove('active');
-        currentIndex = (currentIndex + 1) % itemCount;
-        items[currentIndex].classList.add('active');
-    }
-
-    setInterval(showNextItem, 3000);
-</script>
-
-<style>
-    .carousel {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-    }
-
-    .carousel-item {
-        display: none;
-        position: absolute;
-        width: 100%;
-    }
-
-    .carousel-item.active {
-        display: block;
-    }
-
-    video {
-        width: 100%;
-        height: auto;
-    }
-</style>
