@@ -3,65 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join Anjola on a cybersecurity journey! Learn about SOC, Digital Forensics, and more.">
     <title>Welcome to Anjola's Cybersecurity Journey</title>
     <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h1>Welcome to Anjola's Cybersecurity Journey</h1>
-    <p>Please be patient as I work on refining my skills and improving this project.</p>
-
-    <section id="bio">
-        <h2>About Me</h2>
-        <p>Hi, I'm Anjola, a passionate Cybersecurity Enthusiast with a love for providing innovative security solutions. I hope to specialize in SOC and Digital Forensics and enjoy working on open-source projects.</p>
-    </section>
-
-    <section id="topic">
-        <h2>Install Windows Server With Me</h2>
-        <p>COMING SOON................</p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Connect with me on <a href="https://www.linkedin.com/in/anjolaoluwa-f-7a941880/" target="_blank">LinkedIn</a>.</p>
-    </section>
-
-    <section id="banner">
-        <div class="carousel">
-            <div class="carousel-item active">
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/eqyjEZ6wC8E" 
-                        frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="carousel-item">
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                        frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="carousel-item">
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/3JZ_D3ELwOQ" 
-                        frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            let currentIndex = 0;
-            const items = document.querySelectorAll('.carousel-item');
-            const itemCount = items.length;
-
-            function showNextItem() {
-                items[currentIndex].classList.remove('active');
-                items[currentIndex].style.display = "none"; // Hide current
-
-                currentIndex = (currentIndex + 1) % itemCount; // Next index
-
-                items[currentIndex].classList.add('active');
-                items[currentIndex].style.display = "block"; // Show next
-            }
-
-            setInterval(showNextItem, 5000); // Change slide every 5 seconds
-        });
-    </script>
-
     <style>
         .carousel {
             position: relative;
@@ -71,18 +15,35 @@
         }
 
         .carousel-item {
+            position: absolute;
             width: 100%;
-            display: none; /* Initially hidden */
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
         }
 
         .carousel-item.active {
-            display: block; /* Show active video */
-        }
-
-        iframe {
-            width: 100%;
-            height: 315px; /* Keep all items the same height */
+            opacity: 1;
         }
     </style>
+</head>
+<body>
+    <h1>Welcome to Anjola's Cybersecurity Journey</h1>
+    <p>Please be patient as I work on refining my skills and improving this project.</p>
+
+    <section id="bio">
+        <h2>About Me</h2>
+        <p>Hi, I'm Anjola, a passionate Cybersecurity Enthusiast with a love for providing innovative security solutions. I hope to specialize in SOC and Digital Forensics and I enjoy working on open-source projects.</p>
+    </section>
+
+    <section id="topic">
+        <h2>Install a Windows VM With Me</h2>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/eqyjEZ6wC8E" 
+                frameborder="0" allowfullscreen title="Introduction to Windows Server"></iframe>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Connect with me on <a href="https://www.linkedin.com/in/anjolaoluwa-f-7a941880/" target="_blank">LinkedIn</a>.</p>
+    </section>
 </body>
 </html>
